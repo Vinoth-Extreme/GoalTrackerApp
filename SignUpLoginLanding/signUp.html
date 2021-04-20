@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | Goal Tracker</title>
+
+    <link rel="stylesheet" href="signUp.css">
+    <link rel="stylesheet" href="../../../Assets/font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="leftCol">
+        <img src="../static/img2.svg" alt="" width="600px" height="600px">
+    </div>
+    <div class="rightCol" id="rightCol">
+
+        <div class="Landing" id="Landing">
+            <h3>Welcome to Goal Tracker!</h3>
+            <div class="quote">
+                <p>
+                    Follow your goals, The world will follow you.
+                </p>
+            </div>
+            <div class="buttons">
+                <button type="button" id="SignInBtn">Sign In</button>
+                <button type="button" id="SignUpBtn">Sign Up</button>
+            </div>
+        </div>
+
+        <div class="Login" id="Login">
+            <form action="#">
+                <div class="header">
+                    <small id="BackToLandingBtn"><i class="fa fa-long-arrow-left"></i></small>
+                    <h3>Sign In</h3>
+                    <img src="../static/dp.jpg" alt="" width="100px" height="100px" style="border-radius: 50%;">
+                </div>
+                <div class="body">
+                    <input type="text" placeholder="Username" id="unameSignIn">
+                    <input type="password" name="" id="pwdSignIn" placeholder="Password">
+                    <div class="remember">
+                        <label>
+                            <input type="checkbox" id="checkboxRememberSignIn">
+                            Remember me.
+                        </label>
+                    </div>
+                </div>
+                <div class="footer">
+                    <button type="button">Login</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="signUp" id="signUp">
+            <form action="#">
+
+
+                <div class="step" id="step1">
+                    <div class="header">
+                        <div class="headerLeft">
+                            <small id="BackToLandingBtn2"><i class="fa fa-long-arrow-left"></i></small>
+                            <h3 style="margin: 0 0 0 10px;">Sign Up</h3>                            
+                        </div>                        
+                        <img src="../static/dp.jpg" alt="" width="100px" height="100px" style="border-radius: 50%;">
+                    </div>
+                    <div class="body">
+                        <h4 style="color: grey;">Step 1:</h4>
+                        <h5 style="color: grey;">Tell about yourself.</h5>
+                        <input type="text" placeholder="Firstname" id="fname">
+                        <input type="text" name="" id="lname" placeholder="Lastname">
+                    </div>
+                    <div class="footer">
+                        <button type="button" class="clrBtn" id="clearSignUpForm">Clear</button>
+                        <button type="button" class="nxtBtn" id="OneToStepTwoBtn">Next</button>
+                    </div>
+                </div>
+
+                <div class="step" id="step2">
+                    <div class="header">
+                        <h3 style="margin: 0 0 0 10px;">Sign Up</h3>
+                        <img src="../static/dp.jpg" alt="" width="50px" height="50px" style="border-radius: 50%;">
+                    </div>
+                    <div class="body">
+                        <h4 style="color: grey;">Step 2:</h4>
+                        <h5 style="color: grey;">Set your profile up.</h5>
+                        <input type="text" placeholder="Username" id="uname">
+                        <input type="email" name="" id="email" placeholder="Email">
+                    </div>
+                    <div class="footer">
+                        <button type="button" class="clrBtn" id="TwoToStepOneBtn">Back</button>
+                        <button type="button" class="nxtBtn" id="TwoToStepThreeBtn">Next</button>
+                    </div>
+                </div>
+                
+                <div class="step" id="step3">
+                    <div class="header">
+                        <h3 style="margin: 0 0 0 10px;">Sign Up</h3>
+                        <img src="../static/dp.jpg" alt="" width="50px" height="50px" style="border-radius: 50%;">
+                    </div>
+                    <div class="body">
+                        <h4 style="color: grey;">Step 3:</h4>
+                        <h5 style="color: grey;">Secure your  profile.</h5>
+                        <input type="password" placeholder="Password" id="pwd">
+                        <input type="password" name="" id="cpwd" placeholder="Confirm Password">
+                    </div>
+                    <div class="footer">
+                        <button type="button" class="clrBtn" id="ThreeToStepTwoBtn">Back</button>
+                        <button type="button" class="nxtBtn" id="SubmitSignUpForm">Submit</button>
+                    </div>
+                </div>
+
+
+            </form>
+        </div>
+
+    </div>
+
+    <script src="signUp.js"></script>
+    <script src="validation.js"></script>
+</body>
+</html>
