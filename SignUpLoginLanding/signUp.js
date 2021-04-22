@@ -58,3 +58,11 @@ ThreeToStepTwoBtn.onclick = () => {
     step2InSignUp.style.left = "0%"
     step3InSignUp.style.left = "200%"
 }
+
+const loadingContainer = document.getElementById("loadingContainer");
+const LoginSubmitBtn = document.getElementById("LoginSubmitBtn");
+
+LoginSubmitBtn.onclick = () => {
+    loadingContainer.style.left = "0px";
+    LoginSubmitBtn.innerHTML = `<i class="fa fa-spinner fa-spin" style="color: #fff;"></i>`
+}

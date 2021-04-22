@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
+.firstLogoLoader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+    z-index: 99;
+}
+
+.MainLogo {
+    position: relative;
+    height: 190px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.progressbar {
+    border-top: 1px solid grey;
+    height: 2px;
+    width: 0%;
+    transition: 0.5s;
+}
+
+.MainLogo p {
+    font-family: 'Courgette', cursive;
+    font-size: 60px;
+    color: transparent;
+    -webkit-text-stroke: 1px #000;
+    position: relative;
+    overflow: hidden;
+}

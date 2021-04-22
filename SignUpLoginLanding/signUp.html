@@ -8,8 +8,25 @@
 
     <link rel="stylesheet" href="signUp.css">
     <link rel="stylesheet" href="../../../Assets/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="mainLoading.css">
 </head>
 <body>
+
+    <div class="firstLogoLoader" id="firstLoader">
+        <div class="MainLogo">
+            <p>Goal Tracker</p>
+            <div class="progressbar" id="progressbar"></div>
+        </div>
+    </div>
+
+    <div class="loading" id="loadingContainer">
+        <div class="customSpinner">
+            <div class="spinnerDot"></div>            
+        </div>
+        <p style="margin-top: 20px; color: #fff;">Approaching server...</p>
+    </div>
+
+
     <div class="leftCol">
         <img src="../static/img2.svg" alt="" width="600px" height="600px">
     </div>
@@ -33,7 +50,7 @@
                 <div class="header">
                     <small id="BackToLandingBtn"><i class="fa fa-long-arrow-left"></i></small>
                     <h3>Sign In</h3>
-                    <img src="../static/dp.jpg" alt="" width="100px" height="100px" style="border-radius: 50%;">
+                    <img src="../static/img1.svg" alt="" width="100px" height="100px" style="border-radius: 50%;">
                 </div>
                 <div class="body">
                     <input type="text" placeholder="Username" id="unameSignIn">
@@ -46,7 +63,7 @@
                     </div>
                 </div>
                 <div class="footer">
-                    <button type="button">Login</button>
+                    <button type="button" id="LoginSubmitBtn">Login</button>
                 </div>
             </form>
         </div>
@@ -61,7 +78,7 @@
                             <small id="BackToLandingBtn2"><i class="fa fa-long-arrow-left"></i></small>
                             <h3 style="margin: 0 0 0 10px;">Sign Up</h3>                            
                         </div>                        
-                        <img src="../static/dp.jpg" alt="" width="100px" height="100px" style="border-radius: 50%;">
+                        <img src="../static/img1.svg" alt="" width="100px" height="100px" style="border-radius: 50%;">
                     </div>
                     <div class="body">
                         <h4 style="color: grey;">Step 1:</h4>
@@ -117,5 +134,7 @@
 
     <script src="signUp.js"></script>
     <script src="validation.js"></script>
+
+    <script src="mainLoading.js"></script>
 </body>
 </html>
