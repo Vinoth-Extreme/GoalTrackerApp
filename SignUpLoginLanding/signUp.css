@@ -114,8 +114,8 @@ body {
 }
 
 .rightCol .Landing {
-    width: 400px;
-    height: 600px;
+    width: 350px;
+    height: 500px;
     /* background: rgba(0, 0, 0, 0.05); */
     padding: 20px;
     position: absolute;
@@ -168,7 +168,7 @@ body {
 }
 
 .rightCol .Login{
-    width: 400px;
+    width: 350px;
     height: 500px;
     background-color: transparent;
     box-shadow: 5px 5px 10px grey,
@@ -211,6 +211,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 90%;
+    position: relative;
 }
 
 .rightCol .Login form .body input {
@@ -253,7 +254,7 @@ body {
 }
 
 .rightCol .signUp {
-    width: 400px;
+    width: 350px;
     height: 500px;
     background-color: transparent;
     box-shadow: 5px 5px 10px grey,
@@ -274,6 +275,7 @@ body {
 .rightCol .signUp form .step {
     width: 100%;
     height: 100%;
+    padding: 0 20px 0 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -291,9 +293,13 @@ body {
 .rightCol .signUp form .step .header .headerLeft {
     display: flex;
     align-items: center;
-    width: 35%;
+    width: 40%;
     justify-content: flex-start;
     color: darkblue;
+}
+
+.rightCol .signUp form .step .body {
+    overflow: hidden;
 }
 
 .rightCol .signUp form .step .body input {
@@ -324,6 +330,12 @@ body {
     color: #fff;
 }
 
+.rightCol .signUp form .step .footer .nxtBtn:disabled {
+    background: darkgrey;
+    cursor: not-allowed;
+}
+
+
 #step1 {
     position: absolute;
     left: 0%;
@@ -336,8 +348,23 @@ body {
     transition: 1s;
 }
 
+#step2 .body .ErrorPrompt {
+    background: rgba(225, 43, 43, 0.789);
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+    color: #fff;
+    /* transform: translateY(-100%); */
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
 #step3 {
     position: absolute;
     left: 200%;
     transition: 1s;
+}
+
+@media only screen and (max-width: 1258px) {
 }

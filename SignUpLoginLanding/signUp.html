@@ -7,7 +7,7 @@
     <title>Sign Up | Goal Tracker</title>
 
     <link rel="stylesheet" href="signUp.css">
-    <link rel="stylesheet" href="../../../Assets/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../../Assets/font-awesome-4.7.0/css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="mainLoading.css">
 </head>
 <body>
@@ -21,7 +21,7 @@
 
     <div class="loading" id="loadingContainer">
         <div class="customSpinner">
-            <div class="spinnerDot"></div>            
+            <div class="spinnerDot"></div>
         </div>
         <p style="margin-top: 20px; color: #fff;">Approaching server...</p>
     </div>
@@ -48,7 +48,7 @@
         <div class="Login" id="Login">
             <form action="#">
                 <div class="header">
-                    <small id="BackToLandingBtn"><i class="fa fa-long-arrow-left"></i></small>
+                    <small id="BackToLandingBtn"><i class="fa fa-long-arrow-left"></i> Back</small>
                     <h3>Sign In</h3>
                     <img src="../static/img1.svg" alt="" width="100px" height="100px" style="border-radius: 50%;">
                 </div>
@@ -75,7 +75,7 @@
                 <div class="step" id="step1">
                     <div class="header">
                         <div class="headerLeft">
-                            <small id="BackToLandingBtn2"><i class="fa fa-long-arrow-left"></i></small>
+                            <small id="BackToLandingBtn2"><i class="fa fa-long-arrow-left"></i>Back</small>
                             <h3 style="margin: 0 0 0 10px;">Sign Up</h3>                            
                         </div>                        
                         <img src="../static/img1.svg" alt="" width="100px" height="100px" style="border-radius: 50%;">
@@ -95,10 +95,13 @@
                 <div class="step" id="step2">
                     <div class="header">
                         <h3 style="margin: 0 0 0 10px;">Sign Up</h3>
-                        <img src="../static/dp.jpg" alt="" width="50px" height="50px" style="border-radius: 50%;">
+                        <img src="../static/img3.svg" alt="" width="50px" height="50px" style="border-radius: 50%;">
                     </div>
                     <div class="body">
-                        <h4 style="color: grey;">Step 2:</h4>
+                        <div class="ErrorPrompt" id="ErrorPrompt">
+                            <p>Username Already exists.</p>
+                        </div>
+                        <h4 style="color: grey;" id="step2Title">Step 2:</h4>
                         <h5 style="color: grey;">Set your profile up.</h5>
                         <input type="text" placeholder="Username" id="uname">
                         <input type="email" name="" id="email" placeholder="Email">
@@ -112,7 +115,7 @@
                 <div class="step" id="step3">
                     <div class="header">
                         <h3 style="margin: 0 0 0 10px;">Sign Up</h3>
-                        <img src="../static/dp.jpg" alt="" width="50px" height="50px" style="border-radius: 50%;">
+                        <img src="../static/img4.svg" alt="" width="50px" height="50px" style="border-radius: 50%;">
                     </div>
                     <div class="body">
                         <h4 style="color: grey;">Step 3:</h4>

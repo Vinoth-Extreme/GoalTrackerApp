@@ -18,6 +18,66 @@ const step1InSignUp = document.getElementById("step1")
 const step2InSignUp = document.getElementById("step2")
 const step3InSignUp = document.getElementById("step3")
 
+const loadingContainer = document.getElementById("loadingContainer");
+const LoginSubmitBtn = document.getElementById("LoginSubmitBtn");
+
+const fnameInputField = document.getElementById("fname");
+const lnameInputField = document.getElementById("lname");
+const unameInputField = document.getElementById("uname");
+const emailInputField = document.getElementById("email");
+
+
+const step2Title = document.getElementById("step2Title");
+const ErrorPrompt = document.getElementById("ErrorPrompt");
+
+step2Title.onclick = () => {
+    ErrorPrompt.style.opacity = "1"
+}
+
+if (fnameInputField.value.length > 0 && lnameInputField.value.length > 0) {
+	OneToStepTwoBtn.removeAttribute("disabled");
+} else {
+	OneToStepTwoBtn.setAttribute("disabled", true);
+}
+
+if (unameInputField.value.length > 0 && emailInputField.value.length > 0) {
+	TwoToStepThreeBtn.removeAttribute("disabled");
+} else {
+	TwoToStepThreeBtn.setAttribute("disabled", true);
+}
+
+fnameInputField.addEventListener('input', () => {
+    if(fnameInputField.value.length > 0 && lnameInputField.value.length){
+        OneToStepTwoBtn.removeAttribute('disabled')
+    } else {        
+        OneToStepTwoBtn.setAttribute('disabled', true)
+    }
+})
+
+lnameInputField.addEventListener('input', () => {
+    if(fnameInputField.value.length > 0 && lnameInputField.value.length){
+        OneToStepTwoBtn.removeAttribute('disabled')
+    } else {        
+        OneToStepTwoBtn.setAttribute('disabled', true)
+    }
+})
+
+unameInputField.addEventListener('input', () => {
+    if(unameInputField.value.length > 0 && emailInputField.value.length){
+        TwoToStepThreeBtn.removeAttribute('disabled')
+    } else {        
+        TwoToStepThreeBtn.setAttribute('disabled', true)
+    }
+})
+
+emailInputField.addEventListener('input', () => {
+    if(unameInputField.value.length > 0 && emailInputField.value.length){
+        TwoToStepThreeBtn.removeAttribute("disabled");
+    } else {        
+        TwoToStepThreeBtn.setAttribute("disabled", true);
+    }
+})
+
 
 SignInBtnLanding.onclick = () => {
     LandingContainer.style.left = "-100%"
@@ -59,10 +119,11 @@ ThreeToStepTwoBtn.onclick = () => {
     step3InSignUp.style.left = "200%"
 }
 
-const loadingContainer = document.getElementById("loadingContainer");
-const LoginSubmitBtn = document.getElementById("LoginSubmitBtn");
-
 LoginSubmitBtn.onclick = () => {
     loadingContainer.style.left = "0px";
     LoginSubmitBtn.innerHTML = `<i class="fa fa-spinner fa-spin" style="color: #fff;"></i>`
+    setTimeout(() => {
+        loadingContainer.style.left = "-200%";
+		LoginSubmitBtn.innerHTML = `Login`;
+    }, 3000)
 }

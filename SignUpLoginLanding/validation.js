@@ -80,6 +80,10 @@
 		localStorage.removeItem("SignUpLname");
 		localStorage.removeItem("SignUpUname");
 		localStorage.removeItem("SignUpEmail");
+        fname.value = ""
+        lname.value = ""
+        uname.value = ""
+        email.value = ""
 	};
 
 // Remember username from sign in
