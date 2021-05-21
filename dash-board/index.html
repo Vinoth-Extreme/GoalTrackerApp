@@ -6,19 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dash board | Goal Tracker</title>
 
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.css">    
 </head>
 <body>
-    <div class="sideNav">
+    <div class="sideNav" id="sideNav">
         <div class="sideNavContainer">
-            <div class="sideNavHeader"></div>
+            <div class="sideNavHeader">
+                <img src="../static/img1.svg" alt="" width="90" height="90" style="background-color: rgba(0, 0, 0, 0.7); border-radius: 50%;">
+                <p>Vinoth V</p>
+            </div>
 
-            <div class="sideNavBody"></div>
+            <div class="sideNavBody">
+                <a href="#" class="link link-active">Home</a>
+                <a href="#" class="link">Followers</a>
+                <a href="#" class="link">Following</a>
+                <a href="#" class="link">Settings</a>
+            </div>
 
-            <div class="sideNavFooter"></div>
+            <div class="sideNavFooter">
+                <div class="header">
+                    <span>Goals</span>
+                    <span>P</span>
+                </div>
+                <p class="nothingMessage" style="text-align: center;">No goals have been set yet.</p>
+            </div>
         </div>
 
-        <div class="sideNavSpace"></div>
+        <div class="sideNavSpace" id="sideNavSpace"></div>
     </div>
 
     <div class="body">
@@ -26,7 +40,7 @@
             <div class="logo">
                 <p>Goal Tracker</p>                
             </div>
-            <div class="bread">
+            <div class="bread" id="bread-btn">
                 <div class="line"></div>
                 <div class="line"></div>
                 <div class="line"></div>
@@ -37,13 +51,35 @@
 
         <div class="bodyBody">
             <div class="leftCol">
-                <p>Today: 12:00:09 AM, Sun 21, Mar 2021.</p>
+                <p>
+                    Today: 
+                    <span id="timeBox">00:00:00:</span>,
+                    <span id="day">Sun</span> <span id="date">20</span>,
+                    <span id="month">Jun</span> 
+                    <span id="year">2001</span>.
+                </p>
+
+                <div class="recentAccessedContainer">
+                    <!-- No recently accessed -->
+                    <p class="nothingMessage">No recently accessed items are currently available.</p>
+                </div>
+
+                <div class="graphContainer">
+                    <p class="nothingMessage">No progression it seems!!!</p>
+                </div>
             </div>
 
-            <div class="rightCol"></div>
+            <div class="rightCol">
+                <div class="meetNewPeopleContainer"></div>
+
+                <div class="upcomingEventsContainer">
+                    <p class="nothingMessage">No upcoming events</p>
+                </div>
+            </div>
         </div>
     </div>
 
     <script src="index.js"></script>
+    <script src="./timer.js"></script>
 </body>
 </html>

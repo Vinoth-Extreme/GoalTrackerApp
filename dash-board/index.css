@@ -1,6 +1,27 @@
 /* Font families */
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
+.nothingMessage {
+    color: grey;
+    margin: 0 auto;
+}
+
+.link-active {
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff;
+}
+
+.link {
+    width: 100%;
+    text-align: center;
+    padding: 5px 0 5px 0;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -17,14 +38,62 @@ body {
     left: -200%;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.8);
     z-index: 99;
+    display: flex;
 }
 
 .sideNav .sideNavContainer {
-    width: 20%;
+    width: 25%;
     height: 100%;
-    background: #000;
+    background: #fff;
+}
+
+.sideNav .sideNavSpace {
+    flex: 1;
+    background: transparent;
+}
+
+.sideNav .sideNavContainer .sideNavHeader {
+    background: rgba(0, 0, 0, 0.05);
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sideNav .sideNavContainer .sideNavBody {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sideNav .sideNavContainer .sideNavBody .link {
+    color: #000
+}
+
+.sideNav .sideNavContainer .sideNavBody .link-active {
+    color: #fff;
+}
+
+.sideNav .sideNavContainer .sideNavFooter {
+    margin-top: 20px;
+}
+
+.sideNav .sideNavContainer .sideNavFooter .header {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0 15px 0;
+}
+
+.sideNav .sideNavContainer .sideNavFooter .header span {
+    margin: 0 10px 0 10px;
 }
 
 .body {
@@ -58,6 +127,7 @@ body {
     justify-content: space-evenly;
     align-items: flex-end;
     flex-direction: column;
+    cursor: pointer;
 }
 
 .body .bodyHeader .bread .line {
@@ -81,7 +151,6 @@ body {
 .body .bodyBody {
     margin-top: 20px;
     width: 100%;
-    background: rgba(0, 0, 0, 0.03);
     display: flex;
     flex-direction: row;
 }
@@ -89,11 +158,107 @@ body {
 .body .bodyBody .leftCol {
     display: flex;
     width: 50%;
-    background: red;
+    display: flex;
+    flex-direction: column;    
+}
+
+.body .bodyBody .recentAccessedContainer {
+    width: 70%;
+    height: 150px;
+    background: rgba(0, 0, 0, 0.05);
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+}
+
+
+
+.body .bodyBody .leftCol .graphContainer {
+    width: 80%;
+    height: 350px;
+    background: rgba(0, 0, 0, 0.05);
+    margin: 0 auto;
+    margin-top: 30px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .body .bodyBody .rightCol {
     display: flex;
+    flex-direction: column;
     width: 50%;
-    background: #000;
+}
+
+
+.body .bodyBody .rightCol .meetNewPeopleContainer {
+    width: 80%;
+    height: 160px;
+    background: rgba(0, 0, 0, 0.05);
+    margin: 0 auto;
+    border-radius: 20px;
+}
+
+.body .bodyBody .rightCol .upcomingEventsContainer {
+    width: 80%;
+    height: 350px;
+    background: rgba(0, 0, 0, 0.05);
+    margin: 0 auto;
+    margin-top: 30px;
+    border-radius: 20px;
+    display: flex;
+}
+
+
+.body .bodyBody .rightCol .upcomingEventsContainer p.nothingMessage {
+    justify-self: center;
+    align-self: center;
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 782px) {
+    .body .bodyBody .rightCol {
+        width: 100%
+    }
+
+    .body .bodyBody .leftCol {
+        width: 100%;
+        padding-bottom: 30px;
+    }
+
+    .body .bodyBody {
+        flex-direction: column;
+    }
+    
+    .sideNav .sideNavContainer {
+        width: 35%;
+    }
+}
+
+@media screen and (max-width: 962px) {
+    .nothingMessage {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .sideNav .sideNavContainer {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 1062px) {
+    .nothingMessage {
+        font-size: 15px;
+    }
 }
